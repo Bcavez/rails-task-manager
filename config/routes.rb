@@ -3,4 +3,8 @@ Rails.application.routes.draw do
   get 'tasks', to: 'tasks#index'
 
   get 'tasks/:id', to: 'tasks#show', as: :task
+
+  get 'task/new', to: 'tasks#new', as: :new
+
+  post 'tasks', to: 'tasks#create'
 end

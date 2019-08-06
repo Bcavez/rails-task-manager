@@ -1,7 +1,9 @@
 <h1>My Tasks</h1>
 <% @tasks.each do |task| %>
-  <div>
-  <p><%= check_box_tag 'completed', 'completed', task[:completed], disabled: true %></p>
-  <p><%= link_to task[:title], task_path(task) %></p>
-  </div>
+  <p>
+    <%= check_box_tag 'completed', 'completed', task[:completed], disabled: true %>
+    <%= link_to task[:title], task_path(task) %>
+    </p>
 <% end %>
+
+<%= link_to "Add new Task", new_path %>
